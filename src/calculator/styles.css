@@ -1,0 +1,99 @@
+.Calculator{
+    position: relative;
+    width: 320px;
+    height: 100%;
+    height: fit-content;
+    display: grid;
+    grid-template-areas:    "IP IP IP IP"
+                            "AC AC PE DI"
+                            "N7 N8 N9 MU"
+                            "N4 N5 N6 SU"
+                            "N1 N2 N3 PL"
+                            "N0 N0 NV EQ";
+    gap: 10px;
+    padding: 30px 0px;
+    border-radius: 8px;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(15, 9, 51);
+    background-image: radial-gradient(circle, rgba(0, 0, 0, 0),black);
+    box-shadow: 0 0 1em rgb(14, 44, 87);;
+}
+
+.Calculator button {
+    width: 60px;
+    height: 60px;
+    border-radius: 22%;
+    align-self: center;
+    justify-self: center;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    font-size: 20px;
+    font-weight: 500;
+    background-color: rgb(54, 54, 54);
+    color: white;
+}
+.Calculator button svg {
+    fill: transparent;
+}
+.Calculator button.Key{
+    color: rgb(207, 206, 206);
+}
+.Calculator button.AC{
+    width: 100%;
+    border-radius: 17px 25px;
+}
+.Calculator button.Operation{
+    color: rgb(99, 100, 194);
+}
+.Calculator button.Key:active{
+    opacity: 0.75;
+}
+.Calculator button.Operation:focus{
+    opacity: 0.75;
+}
+.Calculator div{
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+#Screen span{
+    color:white;
+}
+#Screen{
+    width: 100%;
+    height: 100%;
+    grid-area: IP;
+    text-align: center;
+    line-height: 2;
+    background-color: rgb(15, 9, 51);
+    background-image: linear-gradient(to right,black, rgba(0, 0, 0, 0),black);
+    box-shadow: 0 0 1em rgb(14, 44, 87) inset;
+}
+div.Input   { grid-area: IP; }
+div.Plus    { grid-area: PL; }
+div.Minus   { grid-area: SU; }
+div.Times   { grid-area: MU; }
+div.Divide  { grid-area: DI; }
+div.Equal   { grid-area: EQ; }
+div.Percent { grid-area: PE; }
+div._9{ grid-area: N9; }
+div._8{ grid-area: N8; }
+div._7{ grid-area: N7; }
+div._6{ grid-area: N6; }
+div._5{ grid-area: N5; }
+div._4{ grid-area: N4; }
+div._3{ grid-area: N3; }
+div._2{ grid-area: N2; }
+div._V{ grid-area: NV; }
+div._1{ grid-area: N1; }
+div._0{ grid-area: N0; width: 100%;}
+div._0 button{    
+    width: 100%;
+    border-radius: 17px 25px;}
+div.AC{ grid-area: AC; width: 100%;}
